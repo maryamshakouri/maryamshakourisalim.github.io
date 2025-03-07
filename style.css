@@ -1,38 +1,281 @@
+/* =================== GENERAL PAGE STYLING =================== */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    background-color: #ffffff;
+    color: #000000;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background: #0077cc;
-    color: white;
+/* =================== HERO SECTION =================== */
+.hero {
+    max-width: 700px;
+    margin: 80px auto;
     padding: 20px;
-    font-size: 24px;
 }
 
-nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
+/* Profile Picture */
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+    border: 4px solid #ddd;
 }
 
-.content {
-    max-width: 800px;
-    margin: 50px auto;
+/* Main Heading */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Subtext */
+p {
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* =================== PROJECTS SECTION =================== */
+.projects {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Project Box */
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 30px auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Project Image */
+.project img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Project Text */
+.project-text {
+    text-align: left;
+    max-width: 500px;
+}
+
+/* =================== PROJECT DETAIL PAGE (DEFAULT STYLING) =================== */
+.project-detail {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* Default Flexbox Layout (Image Left, Text Right) */
+.project-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Right Side - Text */
+.project-text {
+    width: 50%;
+    text-align: left;
+    padding-left: 30px;
+}
+
+/* Project Title */
+.project-text h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Bullet Points */
+.project-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.project-text ul li {
+    margin-bottom: 8px;
+}
+
+/* =================== PROJECT-SPECIFIC STYLES =================== */
+
+/* --------- EXO-H3 SIMULATION (Uses a Carousel) --------- */
+.project-exo-h3 .visuals {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    max-width: 300px;
+    align-self: flex-start; /* Push visuals to the top */
+    margin-top: 30px; /* Adjust this value to lower the visuals */
+
+}
+
+/* Smaller Image */
+.project-exo-h3 .visual-img {
+    width: 200%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smaller Videos */
+.project-exo-h3 .visual-video {
+    width: 200%;
+    max-width: 450px;
+    height: 700px; /* Adjust height to be proportional */
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --------- GRIP STRENGTH (Stacked Visuals, No Carousel) --------- */
+/* Ensure visuals in Grip Strength project are aligned to the top */
+.project-grip-strength .visuals {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    max-width: 300px;
+    align-self: flex-start; /* Push visuals to the top */
+    margin-top: 30px; /* Adjust this value to lower the visuals */
+
+}
+
+/* Smaller Image */
+.project-grip-strength .visual-img {
+    width: 200%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smaller Videos */
+.project-grip-strength .visual-video {
+    width: 200%;
+    max-width: 450px;
+    height: 200px; /* Adjust height to be proportional */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --------- LOWER BACK MUSCLE FORCE ESTIMATION (One Image, One Video) --------- */
+.project-lower-back .visuals {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    max-width: 300px;
+    align-self: flex-start; /* Push visuals to the top */
+    margin-top: 30px; /* Adjust this value to lower the visuals */
+
+}
+
+/* Smaller Image */
+.project-lower-back .visual-img {
+    width: 200%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smaller Videos */
+.project-lower-back .visual-video {
+    width: 200%;
+    max-width: 450px;
+    height: 200px; /* Adjust height to be proportional */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --------- ERGONOMIC EXOSKELETONS (Keep Carousel) --------- */
+
+.project-exo-ergonomics .visuals {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    max-width: 300px;
+    align-self: flex-start; /* Push visuals to the top */
+    margin-top: 30px; /* Adjust this value to lower the visuals */
+
+}
+
+/* Smaller Image */
+.project-exo-ergonomics .visual-img {
+    width: 200%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Smaller Videos */
+.project-exo-ergonomics .visual-video {
+    width: 200%;
+    max-width: 450px;
+    height: 700px; /* Adjust height to be proportional */
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* =================== BACK BUTTON =================== */
 .btn {
-    background: #0077cc;
-    color: white;
+    display: inline-block;
+    margin-top: 20px;
     padding: 10px 20px;
-    border-radius: 5px;
+    background: #7b7d7f;
+    color: white;
     text-decoration: none;
+    border-radius: 5px;
 }
 
+.btn:hover {
+    background: #a6aaad;
+}
+
+/* =================== TEXT FORMATTING =================== */
+.project-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.project-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.project-text ul li {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    margin-bottom: 8px;
+}
